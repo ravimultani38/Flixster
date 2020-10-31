@@ -98,9 +98,12 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.ViewHolder>{
             }
 
 
+            boolean isPortrait = context.getResources().getConfiguration().orientation == Configuration.ORIENTATION_PORTRAIT;
+
+            int placeholder = isPortrait ? R.drawable.ph : R.drawable.ph;
             int radius = 20; // corner radius, higher value = more rounded
             int margin = 0; // crop margin, set to 0 for corners with no crop
-            Glide.with(context).load(imageUrl).transform(new RoundedCornersTransformation(radius, margin)).into(ivPoster);
+            Glide.with(context).load(imageUrl).transform(new RoundedCornersTransformation(radius, margin)).placeholder(placeholder).error(placeholder).into(ivPoster);
             //1. register click listner on the whole row
 
             container.setOnClickListener(new View.OnClickListener() {
