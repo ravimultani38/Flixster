@@ -1,39 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".DetailActivity"
-    android:orientation= "vertical"
-    >
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout
 
-    <com.google.android.youtube.player.YouTubePlayerView
-        android:id="@+id/player"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
-        android:layout_height="250dp" />
-    <TextView
-        android:id="@+id/tvTitle"
-        android:transitionName="transitionTitle"
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:textSize="30sp"
-        tools:text="it chapter two" />
+        android:layout_height="match_parent"
+        tools:context=".DetailActivity"
+        android:orientation= "vertical"
+        >
 
-    <RatingBar
-        android:id="@+id/ratingBar"
-        style="@style/Widget.AppCompat.RatingBar.Indicator"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:isIndicator="true"
-        android:numStars="10"
-        android:rating="8.5" />
+        <com.google.android.youtube.player.YouTubePlayerView
+            android:id="@+id/player"
+            android:layout_width="match_parent"
+            android:layout_height="250dp" />
+        <TextView
+            android:id="@+id/tvTitle"
+            android:transitionName="transitionTitle"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:textSize="30sp"
+            tools:text="it chapter two" />
 
-    <TextView
-        android:id="@+id/tvOverview"
-        android:transitionName="transitionOverview"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        tools:text="A lowly utility worker is called to the future by a mysterious radio signal, he must leave his dying wife to embark on a journey that will force him to face his deepest fears in an attempt to change the fabric of reality and save humankind from its greatest environmental crisis yet." />
-</LinearLayout>
+        <RatingBar
+            android:id="@+id/ratingBar"
+            style="@style/Widget.AppCompat.RatingBar.Indicator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:isIndicator="true"
+            android:numStars="10"
+            android:rating="8.5" />
+
+        <TextView
+            android:id="@+id/tvOverview"
+            android:transitionName="transitionOverview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:text="A lowly utility worker is called to the future by a mysterious radio signal, he must leave his dying wife to embark on a journey that will force him to face his deepest fears in an attempt to change the fabric of reality and save humankind from its greatest environmental crisis yet." />
+    </LinearLayout>
+</layout>

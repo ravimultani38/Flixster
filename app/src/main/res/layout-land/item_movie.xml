@@ -1,73 +1,77 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-
+<layout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/container"
-    android:layout_width="match_parent"
-    android:layout_margin="5dp"
-    android:layout_height="wrap_content">
-
-    <ImageView
-        android:id="@+id/ivPoster"
-        android:layout_width="300dp"
-        android:layout_height="150dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginRight = "8dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:srcCompat="@tools:sample/avatars" />
-    <ImageView
-        android:id="@+id/ivPlayLogo"
-        android:layout_width="56dp"
-        android:layout_height="wrap_content"
-        android:layout_alignTop="@id/ivPoster"
-        android:layout_alignBottom="@id/ivPoster"
-        android:layout_marginLeft="120dp"
-        android:layout_marginTop="50dp"
-        android:layout_marginBottom="50dp"
-        app:srcCompat="@drawable/iv_tube2"
-        />
+    xmlns:tools="http://schemas.android.com/tools">
+    <RelativeLayout
 
 
-    <TextView
-        android:id="@+id/tvTitle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginStart="13dp"
-        android:layout_marginLeft="0dp"
-        android:layout_marginTop="4dp"
-        android:layout_marginEnd="-7dp"
-        android:layout_marginRight="8dp"
-        android:layout_toEndOf="@id/ivPoster"
-        android:text="Movie Title"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/ivPoster"
-        app:layout_constraintTop_toTopOf="@+id/ivPoster" />
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_margin="5dp"
+        android:layout_height="wrap_content">
 
-    <TextView
-        android:id="@+id/tvOverview"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/tvTitle"
-        android:layout_marginStart="17dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="24dp"
-        android:layout_marginRight="24dp"
-        android:layout_marginBottom="8dp"
-        android:layout_toEndOf="@+id/ivPoster"
-        android:text="movie overview and synopsis"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/tvTitle"
-        app:layout_constraintTop_toBottomOf="@+id/tvTitle"
-        app:layout_constraintVertical_bias="0.0" />
-</RelativeLayout>
+        <ImageView
+            android:id="@+id/ivPoster"
+            android:layout_width="300dp"
+            android:layout_height="150dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight = "8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:srcCompat="@tools:sample/avatars" />
+        <ImageView
+            android:id="@+id/ivPlayLogo"
+            android:layout_width="56dp"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/ivPoster"
+            android:layout_alignBottom="@id/ivPoster"
+            android:layout_marginLeft="120dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginBottom="50dp"
+            app:srcCompat="@drawable/iv_tube2"
+            />
+
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="13dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="-7dp"
+            android:layout_marginRight="8dp"
+            android:layout_toEndOf="@id/ivPoster"
+            android:text="Movie Title"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/ivPoster"
+            app:layout_constraintTop_toTopOf="@+id/ivPoster" />
+
+        <TextView
+            android:id="@+id/tvOverview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvTitle"
+            android:layout_marginStart="17dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginRight="24dp"
+            android:layout_marginBottom="8dp"
+            android:layout_toEndOf="@+id/ivPoster"
+            android:text="movie overview and synopsis"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/tvTitle"
+            app:layout_constraintTop_toBottomOf="@+id/tvTitle"
+            app:layout_constraintVertical_bias="0.0" />
+    </RelativeLayout>
+
+</layout>

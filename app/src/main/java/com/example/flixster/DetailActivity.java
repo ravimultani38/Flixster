@@ -1,6 +1,7 @@
 package com.example.flixster;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.databinding.DataBindingUtil;
 import okhttp3.Headers;
 
 import android.os.Bundle;
@@ -10,6 +11,8 @@ import android.widget.TextView;
 
 import com.codepath.asynchttpclient.AsyncHttpClient;
 import com.codepath.asynchttpclient.callback.JsonHttpResponseHandler;
+import com.example.flixster.databinding.ActivityDetailBinding;
+import com.example.flixster.databinding.ActivityMainBinding;
 import com.example.flixster.models.Movie;
 import com.google.android.youtube.player.YouTubeBaseActivity;
 import com.google.android.youtube.player.YouTubeInitializationResult;
@@ -32,20 +35,21 @@ public class DetailActivity extends YouTubeBaseActivity {
 
 
 
+    private ActivityDetailBinding binding;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_detail);
+        binding = DataBindingUtil.setContentView(this,R.layout.activity_detail);
 
-        tvTitle = findViewById(R.id.tvTitle);
-        tvOverview = findViewById(R.id.tvOverview);
-        ratingBar = findViewById(R.id.ratingBar);
-        youTubePlayerView = findViewById(R.id.player);
+        tvTitle = binding.tvTitle;
+        tvOverview = binding.tvOverview;
+        ratingBar = binding.ratingBar;
+        youTubePlayerView = binding.player;
 
         Movie movie = Parcels.unwrap(getIntent().getParcelableExtra("movie"));
-        tvTitle.setText(movie.getTitle());
-        tvOverview.setText(movie.getOverview());
-        ratingBar.setRating((float)movie.getRating());
+        binding.tvTitle.setText(movie.getTitle());
+        binding.tvOverview.setText(movie.getOverview());
+        binding.ratingBar.setRating((float)movie.getRating());
         final double rating = movie.getRating();
 
         AsyncHttpClient client = new AsyncHttpClient();
